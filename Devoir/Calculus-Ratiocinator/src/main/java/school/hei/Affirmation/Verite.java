@@ -7,11 +7,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Verite extends Affirmation {
-    private String description_de_verite;
+    private String descriptionVerite;
 
-    public Verite(String description, String description_de_verite) {
+    public Verite(String description, String descriptionVerite) {
         super(description);
-        this.description_de_verite = description_de_verite;
+        this.descriptionVerite = descriptionVerite;
     }
 
     @Override

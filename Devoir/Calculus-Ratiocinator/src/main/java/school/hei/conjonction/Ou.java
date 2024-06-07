@@ -6,20 +6,20 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Ou extends Affirmation {
-    private Affirmation affirmation_1, affirmation_2;
+    private Affirmation affirmation1, affirmation2;
 
-    public Ou(Affirmation affirmation_1, Affirmation affirmation_2) {
-        super(affirmation_1.getDescription() + "Ou" + affirmation_2.getDescription());
-        this.affirmation_1 = affirmation_1;
-        this.affirmation_2 = affirmation_2;
+    public Ou(Affirmation affirmation1, Affirmation affirmation2) {
+        super(affirmation1.getDescription() + "Ou" + affirmation2.getDescription());
+        this.affirmation1 = affirmation1;
+        this.affirmation2 = affirmation2;
     }
 
     @Override
     public String evaluer() {
-        String premiere_affirmation = affirmation_1.evaluer();
-        String deuxieme_affirmation = affirmation_2.evaluer();
+        String premiereAffirmation = affirmation1.evaluer();
+        String deuxiemeAffirmation = affirmation2.evaluer();
 
-        if (premiere_affirmation.equals("vrai") || deuxieme_affirmation.equals("vrai")) {
+        if (premiereAffirmation.equals("vrai") || deuxiemeAffirmation.equals("vrai")) {
             return "vrai";
         }else {
             return "faux";

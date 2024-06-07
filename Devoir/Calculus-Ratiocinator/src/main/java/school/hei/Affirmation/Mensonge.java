@@ -6,11 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Mensonge extends Affirmation{
-    protected String description_de_mensonge;
+    protected String descriptionMensonge;
 
-    public Mensonge(String description, String description_de_mensonge) {
+    public Mensonge(String description, String descriptionMensonge) {
         super(description);
-        this.description_de_mensonge = description_de_mensonge;
+        this.descriptionMensonge = descriptionMensonge;
     }
 
     @Override

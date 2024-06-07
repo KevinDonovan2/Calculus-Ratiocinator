@@ -6,21 +6,21 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Donc extends Affirmation {
-    private Affirmation affirmation_1, affirmation_2;
+    private Affirmation affirmation1, affirmation2;
 
-    public Donc(Affirmation affirmation_1, Affirmation affirmation_2) {
-        super(affirmation_1.getDescription() + "Donc" + affirmation_2.getDescription());
-        this.affirmation_1 = affirmation_1;
-        this.affirmation_2 = affirmation_2;
+    public Donc(Affirmation affirmation1, Affirmation affirmation2) {
+        super(affirmation1.getDescription() + "Donc" + affirmation2.getDescription());
+        this.affirmation1 = affirmation1;
+        this.affirmation2 = affirmation2;
     }
 
     @Override
     public String evaluer() {
-        String premiere_affirmation = affirmation_1.evaluer();
-        String deuxieme_affirmation = affirmation_2.evaluer();
-        if(premiere_affirmation.equals("vrai") && deuxieme_affirmation.equals("faux")){
+        String premiereAffirmation = affirmation1.evaluer();
+        String deuxiemeAffirmation = affirmation2.evaluer();
+        if(premiereAffirmation.equals("vrai") && deuxiemeAffirmation.equals("faux")){
             return "faux";
-        } else if (premiere_affirmation.equals("faux") || deuxieme_affirmation.equals("vrai")) {
+        } else if (premiereAffirmation.equals("faux") || deuxiemeAffirmation.equals("vrai")) {
             return "vrai";
         }else {
             return "je ne sais pas";
